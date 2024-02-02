@@ -44,22 +44,31 @@ void Game::play() {
                         cin >> dir; 
                         if(isDirection(dir)) validCmd = floor->attack(getDirection(dir));
                     } else if(cmd == "r") {
+                        delete floor;
+                        floor = new Floor(inputFile, givenMap);
                         floorNum = 0;
                         floor->setFloorNum(floorNum);
                         race = raceSelect();
+
                         floor->raceSelect(race);
+
                         n = diffSelect();
                         floor->diffSelect(n);
                         floor->resetFile();
                         floor->newFloor();
+                        validCmd = true;
                     } else if(cmd == "q") {
-                        break; // might be OK to change to return
-                    }
+                        cout << "You chose to end the game. Your score is: " << floor->getPlayerScore() << endl;
+                        return;
+                    } 
                     
                     if(validCmd) {
                         floor->gameTurn();
+                    } else if(cmd == "m") {
+                        getManual();
                     } else {
-                        cout << "Please enter a valid command: " << endl;
+                        cout << "You have entered an invalid command. Please enter a valid command: " << endl;
+                        cout << "If in doubt, refer to the manual by pressing 'm'. " << endl;
                     }
                 } while(!validCmd);
 
@@ -127,7 +136,7 @@ char Game::raceSelect() {
 }
 
 int Game::diffSelect() {
-    int n;
+    char n;
     cout << "Please choose the Difficulty Level:" << endl;
     cout << "0:    Easy    10 Enemy each floor" << endl;
     cout << "1:   Normal   20 Enemy each floor" << endl;
@@ -135,10 +144,43 @@ int Game::diffSelect() {
     cout << "3: Impossible 40 Enemy each floor" << endl;
     cout << "Input one of following: 0,1,2,3" << endl;
     while(cin >> n){
-        if(n == 0 || n == 1 || n == 2 || n == 3) break;
+        if(n == '0' || n == '1' || n == '2' || n == '3') break;
         cout << "Invalid choose of Difficulty Level!" << endl;
         cout << "Please input one of following: 0,1,2,3" << endl;
     }
-    return n;
+    return (n - '0');
+}
+
+void Game::getManual() {
+    cout << endl;
+    cout << "========================================================" << endl;
+    cout << "Hope you're having fun with ChamberCrawler3000!" << endl;
+    cout << endl;
+
+    cout << "Actions: " << endl;
+    cout << "The player can reach/move to one tile of their vicinity. The directions are no, so, we, ea, nw, ne, sw, se." << endl;
+    cout << "To Move:           '{direction}' (you can't step onto a potion or a treaure guarded by a dragon)" << endl;
+    cout << "To Attack:         'a {directioin}'" << endl;
+    cout << "To Drink Potion:   'u {direction}' (you can see the type of potion you have already drank)" << endl;
+    cout << "To re-select player race or difficulty level: 'r'" << endl;
+    cout << "To quit the game:  'q'" << endl;
+    cout << endl;
+
+    cout << "Game Objects: " << endl;
+    cout << "@: Player (Green)" << endl; 
+    cout << "W/V/N/M/D/X/T: Enemies (Red)" << endl;
+    cout << "G: Treasure (Gold)" << endl; 
+    cout << "P: Potion (Purple)" << endl;
+    cout << "B & C: Barriersuit & Compass (Blue)" << endl; 
+    cout << endl;
+
+    cout << "Game Objectives: " << endl;
+    cout << "There are a total of 5 floors in this dungeon. The player's objective is to survive and pass the exit of Floor 5." << endl;
+    cout << "A floor's exit would only appear when the player acquires the compass, which is hidden in a randomly selected enemy." << endl;
+    cout << "Find the compass and get to the next floor. Best of luck on your journey!" << endl;
+    cout << endl;
+
+    cout << "========================================================" << endl;
+    cout << "Please enter your next action: " << endl;
 }
 
