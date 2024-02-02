@@ -378,13 +378,14 @@ void Floor::newFloor(){
 
 void Floor::raceSelect(char c) {
     pRace = c;
-    delete player;
+    // delete player;
     if(c == 'h') player = new Human{Prow,Pcol};
     else if(c == 'e') player = new Elves{Prow,Pcol};
     else if(c == 'd') player = new Dwarf{Prow,Pcol};
     else if(c == 'o') player = new Orc{Prow,Pcol};
     else if(c == 'g') player = new God{Prow,Pcol};
     else cerr << "Incorrect Race Selection" << endl;
+    
     player->attach(td);
     player->getPrevious()->attach(td);
 }

@@ -15,6 +15,7 @@ class Game {
     int barrierSuit;
     char raceSelect();
     int diffSelect();
+    void getManual();
     bool isDirection(string cmd);
     Direction getDirection(string cmd);
 public:

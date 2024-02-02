@@ -1,0 +1,6 @@
+Bugs to be fixed: all fixed
+
+Potential Future Updates:
+ - Add new playable maps
+ - Add new equipments in addition to compass & barriersuits (ex. FASword, FArmour, etc. - in progress)
+ - Give enemies more special abilities (ex. Phoenix revive, etc.)
