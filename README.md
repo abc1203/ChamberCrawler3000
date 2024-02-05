@@ -1,5 +1,7 @@
 # ChamberCrawler3000
 
+Welcome to <u>ChamberCrawler3000</u>!
+
 ChamberCrawler3000 is a rogue-like console game that is playable on linux. The player can select the playerrace of their character along with the difficulty level, before heading to a dungeon of 5 floors. 
 
 <img src="https://github.com/abc1203/ChamberCrawler3000/blob/main/img/cc3k_demo.png">
@@ -11,8 +13,8 @@ The player can reach/move to one tile of their vicinity. The directions are no, 
 To **Move**:           '{direction}'  
 To **Attack**:         'a {directioin}'  
 To **Drink Potion**:   'u {direction}' (player can see the type of potion they have already drank)  
-To **Re-select player race or difficulty level**: 'r'  
-To **Quit the game**:  'q'  
+To **Re-select** player race or difficulty level: 'r'  
+To **Quit** the game:  'q'  
 
 ## In-game Objects
 **@**: Player (Green)  
