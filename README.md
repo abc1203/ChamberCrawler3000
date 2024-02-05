@@ -1,6 +1,6 @@
 # ChamberCrawler3000
 
-Welcome to *ChamberCrawler3000*!
+Welcome to **_ChamberCrawler3000_**!
 
 ChamberCrawler3000 is a rogue-like console game that is playable on linux. The player can select the playerrace of their character along with the difficulty level, before heading to a dungeon of 5 floors. 
 
