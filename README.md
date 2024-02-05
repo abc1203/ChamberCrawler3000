@@ -12,7 +12,7 @@ To **Move**:           '{direction}'
 To **Attack**:         'a {directioin}'  
 To **Drink Potion**:   'u {direction}' (player can see the type of potion they have already drank)  
 To **Re-select player race or difficulty level**: 'r'  
-To **quit the game**:  'q'  
+To **Quit the game**:  'q'  
 
 ## In-game Objects
 **@**: Player (Green)  
