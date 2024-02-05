@@ -7,19 +7,19 @@ ChamberCrawler3000 is a rogue-like console game that is playable on linux. The p
 The player's objective is to escape floor 5 of the dungeon while collecting as much gold as possible. The exit of each floor is invisible and inaccessible initially, and will only appear and become visible when the player acquires the compass. The compass is hidden inside a random enemy, meaning that the player needs to eliminate the enemies to acquire the compass.
 
 ## Playable Actions
-The player can reach/move to one tile of their vicinity. The directions are no, so, we, ea, nw, ne, sw, se._
-To **Move**:           '{direction}'_
-To **Attack**:         'a {directioin}'_
-To **Drink Potion**:   'u {direction}' (player can see the type of potion they have already drank)_
-To **Re-select player race or difficulty level**: 'r'_
-To **quit the game**:  'q'_
+The player can reach/move to one tile of their vicinity. The directions are no, so, we, ea, nw, ne, sw, se.  
+To **Move**:           '{direction}'  
+To **Attack**:         'a {directioin}'  
+To **Drink Potion**:   'u {direction}' (player can see the type of potion they have already drank)  
+To **Re-select player race or difficulty level**: 'r'  
+To **quit the game**:  'q'  
 
 ## In-game Objects
-**@**: Player (Green)_
-**W/V/N/M/D/X/T**: Enemies (Red)_
-**G**: Treasure (Gold)_
-**P**: Potion (Purple)_
-**B & C**: Barriersuit & Compass (Blue)_
+**@**: Player (Green)  
+**W/V/N/M/D/X/T**: Enemies (Red)  
+**G**: Treasure (Gold)  
+**P**: Potion (Purple)  
+**B & C**: Barriersuit & Compass (Blue)  
 
 ## How to Set up
 1. In a Linux environment, go to ```ChamberCrawler3000/src```
